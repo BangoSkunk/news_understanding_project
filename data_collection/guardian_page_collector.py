@@ -13,7 +13,7 @@ def parse_args():
     parser.add_argument('--end-date', type=str, default='2020-03-02')
     parser.add_argument('--part', type=int, default=1)
     parser.add_argument('--data-path', type=str)
-    parser.add_argument('--api-key', type=str, default='a48be119-a9d1-497e-a595-b1f37dea391c')
+    parser.add_argument('--api-key', type=str)
     args = parser.parse_args()
     return args
 
