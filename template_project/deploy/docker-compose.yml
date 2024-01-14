@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./deploy/Dockerfile
+      target: prod
+    image: template_project:${TEMPLATE_PROJECT_VERSION:-latest}
+    restart: always
+    env_file:
+    - .env
+    environment:
+      TEMPLATE_PROJECT_HOST: 0.0.0.0
